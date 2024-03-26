@@ -543,6 +543,7 @@ section.campaigns-area .section-title {
   justify-content: center;
   margin: 45px 0 0px 0;
   gap: 5px;
+  min-height: 16px;
 }
 
 .owl-dots > div {
