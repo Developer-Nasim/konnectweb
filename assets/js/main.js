@@ -5,8 +5,9 @@
   $('.siteBar-btn').click( function (){ 
     $('.mobile-menu').toggleClass('siteBar');   
   }); 
-
-    
+   // NiceSelect
+   $("select").niceSelect();
+   
   // owlCarousel
   $(".all-campains").owlCarousel({
     loop: true,
@@ -56,6 +57,22 @@
   });
 
  
-  
+  // custom tab
+  tabFunc(
+    document.querySelectorAll(".plan-tab-link"),
+    document.querySelectorAll(".plan-tab-content")
+  );
+  function tabFunc(tabLinks, tabs) {
+    tabLinks.forEach((link, index) => {
+      link.addEventListener("click", () => {
+      for (let i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].classList.remove("active");
+        tabs[i].classList.remove("active");
+      }
+      link.classList.add("active");
+      tabs[index].classList.add("active");
+      });
+    });
+  }
  
 })(jQuery);
